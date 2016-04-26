@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title> TakeTours - Buy Tours and Vacations Online</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+
+var slideimages = new Array()
+
+slideimages[0] = new Image()
+
+slideimages[0].src = "images/slide1.jpg"
+
+slideimages[1] = new Image()
+
+slideimages[1].src = "images/slide2.jpg"
+
+slideimages[2] = new Image()
+
+slideimages[2].src = "images/slide3.jpg"
+
+slideimages[3] = new Image()
+
+slideimages[3].src = "images/slide4.jpg"
+
+slideimages[4] = new Image()
+
+slideimages[4].src = "images/slide5.jpg"
+
+
+
+var step=0
+
+						function slideit(){
+
+
+						if (!document.images)
+
+						return
+
+						document.getElementById('slide').src = slideimages[step].src
+
+						if (step<4)
+
+						step++
+
+						else
+
+						step=0
+
+						setTimeout("slideit()",3000)
+
+						}
+
+
+</script>
+
+</head>
+<body>
+<header><h1>Take<span id="spanH1">Tours</span></h1></header>
+<div id="headerSide">
+	<a href="#">Login or Register </a>&nbsp;&nbsp;
+	<a href="#"><i class="fa fa-shopping-cart"></i></a>
+	&nbsp;&nbsp;
+	<a href="#"><i class="fa fa-flag-checkered"></i></a>
+	 | <a href="#">&nbsp;&nbsp; Help </a>&nbsp;&nbsp;
+	<a href="#"><i class="fa fa-comments-o" style="color:blue;"></i>&nbsp;Live Chat</a>&nbsp;&nbsp;
+	<i class="fa fa-phone"></i>&nbsp;&nbsp;+1-888-428-7255  <span id="spanH2"> 24/7</span>
+</div>
+<nav>
+	<ul>
+		<li id="li1"><a href="#">Home</a></li>
+		<li><a href="#">Tours & Vacations</a>
+			<ul class="drop1">
+				<li><a href="#">US East Coast</a><br>
+					<a href="#">New York</a><br>
+					<a href="#">Niagara Falls</a><br>
+					<a href="#">Washington D.C.</a><br>
+					<a href="#">Orlando</a><br>
+					<a href="#">Boston</a><br>
+					<a href="#">Miami</a><br>
+					<a href="#">Philadelphia</a><br>
+					<a href="#">Chicago</a><br>
+				</li>
+				<li><a href="#">US West Coast</a><br>
+					<a href="#">Los Angeles</a><br>
+					<a href="#">Grand Canyon</a><br>
+					<a href="#">Las Vegas</a><br>
+					<a href="#">San Francisco</a><br>
+					<a href="#">Yellowstone</a><br>
+					<a href="#">Hawaii</a><br>
+					<a href="#">Yosemite</a><br>
+					<a href="#">San Diego</a><br>
+				</a></li>
+				<li><a href="#">Canada</a><br>
+					<a href="#">Montreal</a><br>
+					<a href="#">Toronto</a><br>
+					<a href="#">Vancouver</a><br>
+					<a href="#">Victoria</a><br>
+					<a href="#">Whistler</a><br>
+					<a href="#">Rocky Mountains</a><br>
+					<a href="#">Ottawa</a><br>
+					<a href="#">Calgary</a><br>
+				</a></li>
+				<li><a href="#">Europe</a><br>
+					<a href="#">Italy</a><br>
+					<a href="#">Spain</a><br>
+					<a href="#">Portugal</a><br>
+					<a href="#">Germany</a><br>
+					<a href="#">London</a><br>
+					<a href="#">Paris</a><br>
+					<a href="#">Vienna</a><br>
+					<a href="#">Iceland</a><br>
+				</a></li>
+				<li><a href="#">Australia</a><br>
+					<a href="#">Sydney</a><br>
+					<a href="#">Latin America</a><br>
+					<a href="#">Mexico</a><br>
+					<a href="#">Brazil</a><br>
+					<a href="#">Asia</a><br>
+					<a href="#">Bangkok</a><br>
+					<a href="#">Shanghai</a><br>
+					<a href="#">Middle East</a><br>
+				</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Hotels</a>
+			<ul class="drop1">
+				<li><a href="#">New York</a><br>
+					<a href="#">Washington DC</a><br>
+					<a href="#">Orlando</a><br>
+					<a href="#">Boston</a><br>
+					<a href="#">Los Angeles</a><br>
+					<a href="#">Las Vegas</a><br>
+					<a href="#">San Francisco</a><br>
+					<a href="#">San Diego</a><br>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">Shows</a>
+				<ul class="drop1">
+					<li><a href="#">Hawaii</a><br>
+						<a href="#">Magic of Polynesian Show</a><br>
+						<a href="#">Paradise Cove Luau Show</a><br>
+						<a href="#">Sheraton Hawaiian Dinner Show</a><br>
+						<a href="#">Las Vegas</a><br>
+						<a href="#">Blue Man Group</a><br>
+						<a href="#">KÀ Cirque du Soleil</a><br>
+						<a href="#">O Cirque du Soleil</a><br>
+						<a href="#">New York</a><br>
+						<a href="#">Chicago</a><br>
+						<a href="#">The Lion King</a><br>
+					</li>
+				</ul>
+		</li>
+		<li><a href="#">Bus Tickets</a></li>
+		<li><a href="#">Deals</a></li>
+		<li><a href="#">Private Tours</a></li>
+	</ul>
+</nav>
+
+<div id="container1">
+	<h4>Find Tours and Vacations</h4>
+	<h5>Trending Now:</h5>
+	<h6>
+		<a href="#">East Coast Packages</a>,
+		<a href="#">Grand Canyon Tours</a>,
+		<a href="#">Yellostone Tours</a>
+	</h6>
+	<form action="#">
+            <input type="text" name="departure"  value="Departure :" placeholder="Anywhere">
+			<input type="text" placeholder="Add Destination(s), attraction(s),Keywords or tour code" size="80">
+			<input id="showtour" type="submit" value="Show Tour">
+			<br>		   
+			<input type="text" value="Starting Date(s) :" placeholder="Any day" size="50">
+			<input type="text" value="Duration :" placeholder="Any length" size="50">	
+	</form>
+</div>
+
+<section>
+	<div id="section1">
+		<h1 id="sectionHead">See the World with TakeTours!</h1>
+	</div>
+	<div id="section2">
+		<img src="images/img1.jpg" height="115px" width="195px" style="border-radius:6px">
+		<br>
+		<a href="#">Grand Canyon 2-3 Day Tours.<br>Buy 2 Get 3rd Free!</a>
+	</div>
+	<div id="section3">
+		<img src="images/img2.jpg" height="115px" width="195px" style="border-radius:6px">
+		<br>
+		<a href="#">Niagara Falls 2-3 Day Tours<br>from $108. Best Selling!</a>
+	</div>
+	<br>
+	<hr>
+	<span id="section4">
+		New Releases!
+	</span>
+	<br>
+	<span id="span1">
+		<i class="fa fa-angle-double-right"></i><a href="#"> Up to 10% OFF! Book your<br>East Coast tour package</a>
+	</span>
+	<span id="span2">
+		<i class="fa fa-angle-double-right"></i><a href="#">Acadia National Park -<br>special seasonal tours</a>
+	</span>
+	<br>
+	<span id="span3">
+		<i class="fa fa-angle-double-right"></i><a href="#">Fall foliage seasonal tours &<br>sightseeing</a>
+	</span>	
+	<span id="span4">
+		<i class="fa fa-angle-double-right"></i><a href="#"> Yellowstone Park - Last<br>departures of the season!</a>
+	</span>
+	<hr>
+
+</section>
+
+<div id="slider">
+		<br>
+		<img src="images/slide1.jpg" id="slide" width="590" height="340" style="border-radius:10px" />
+
+						<script type="text/javascript">
+						slideit()
+						</script>
+</div>
+
+
+<div id="section5">
+	<div id="sec5-1">
+		Top Local Tours and Sightseeing Activities
+	</div>
+	<div id="sec5-2">
+		<input id="btn5-2-1" type="submit" value="Niagara Falls">
+		<input id="btn5-2-2" type="submit" value="Washington DC">
+		<input id="btn5-2-3" type="submit" value="Grand Canyon">
+	</div>
+	<div id="sec5-3">
+		<table id="table1">
+			<tr>
+				<td>
+				<b>Best Selling<a href="#"> Niagara Falls Tours from New York</a></b>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">3-Day Niagara Falls, Washington DC, Watkins Gl...</a>
+				</td>
+				<td>
+					<del>$135</del> $108
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">3-Day Niagara Falls, Washington DC, Watkins Gl...</a>
+				</td>
+				<td>
+					<del>$165</del> $132
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">3-Day Niagara Falls, Toronto Canada Tour from...</a>
+				</td>
+				<td>
+					<del>$190</del> $152
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">4-Day Philadelphia, Washington DC, Niagara Falls ...</a>
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$192
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<b><a href="#">See more Niagara Falls Vacation Packages from New York</a></b><i class="fa fa-angle-double-right"></i>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id="section6">
+	<div id="sec6-1">
+		Popular Tours & Vacations!
+	</div>
+	<div id="sec6-2">
+		<input id="btn6-2-1" type="submit" value="US East Coast Vacations">
+		<input id="btn6-2-2" type="submit" value="US West Coast Vacations">
+		<input id="btn6-2-3" type="submit" value="Europe Vacations">
+	</div>
+	<div id="sec6-3">
+		<div id="sec6-3-1">
+			<img src="images/sec6-3-1.jpg" width="100" height="85" style="border-radius:6px">
+		</div>
+		<table id="table2">
+			<tr>
+				<td id="tdSpace">
+					<i class="fa fa-angle-double-right"></i><b><a href="#">Niagara Falls Tours & Vacation Packages from New York</a></b>
+				</td>
+				<td>
+					$108+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">Washington DC Tours & Vacation Packages from New York</a>
+				</td>
+				<td>
+					$76+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">Niagara Falls Tours & Vacation Packages from Boston</a>
+				</td>
+				<td>
+					$165+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">Canada Tours & Vacation Packages from Boston</a>
+				</td>
+				<td>
+					$238+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fa fa-angle-double-right"></i><a href="#">Niagara Falls Tours & Vacation Packages from Washington DC</a>
+				</td>
+				<td>
+					$192+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<b><a href="#">See more vacation package deals in US East Coast</a></b><i class="fa fa-angle-double-right"></i>
+				</td>
+			</tr>
+
+		</table>
+	</div>
+
+</div>
+<hr>
+
+
+
+<div id="fDestinations">
+	<b>Featured Destinations</b>
+	<br>
+	<img src="images/fDestinations1.jpg" width="130px" style="border-radius:6px">
+	<img src="images/fDestinations2.jpg" width="130px" style="border-radius:6px">
+	<img src="images/fDestinations3.jpg" width="130px" style="border-radius:6px">
+	<br>
+	<img src="images/fDestinations4.jpg" width="130px" style="border-radius:6px">
+	<img src="images/fDestinations5.jpg" width="130px" style="border-radius:6px">
+	<img src="images/fDestinations6.jpg" width="130px" style="border-radius:6px">
+		<div id="fDestinationsMore">
+			<a href="#">Deals by destination</a>
+		</div>
+</div>
+
+
+<div id="tReviews">
+	<b>Traveler Reviews</b>
+	<br>
+
+	<div id="tReviews-1">
+		<b><a href="">2-Day Niagara Falls and 1000 Islands Tour from New York | New Jersey</a></b>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/stars.gif">
+	</div>
+	<div id="tReviews-2">
+		<i class="fa fa-quote-left"></i>
+		Great trip but we wished ample time was given at Niagara Falls. Just an hour??? Not enough.<br>Also it would be like a feather on the cap if additional places be covered if guests like me would <br>love to visit at an extra price. Overall, me and my family loved the attractions, Niagara Falls and<br>Maid of the Mist topping the charts. Also Sherry, our guide...
+		<i class="fa fa-quote-right"></i>
+		<span id="tComment">&nbsp;By: Rahul 2015-09-02</span>
+	</div>
+	<div id="tReviewsMore"><a href="#"> See More</a></div>
+	<br>
+	  
+</div>
+<hr>
+
+<div id="newsletter">
+	<div id="newsletter-2">
+		
+	</div>
+	<div id="newsletter-3">
+		Subscribe to Newsletters
+		<br>
+		<input id="btn-email" type="email" name="email" style="border-radius:6px" placeholder="enter your email address">
+		<input id="btn-signUp" type="submit" value="Sign Up" style="border-radius:6px">
+		<br>
+		<span id="newsletter-1">
+		We will deliver great deals to your inbox!
+		<br>
+		<a href="#">Read our Privacy Policy</a><i class="fa fa-angle-double-right"></i>
+		</span>
+	</div>
+</div>
+<div id="needHelp">
+	<div id="needHelp-1">
+		<img src="images/call.jpg" width="100px" height="120px">
+		&nbsp;&nbsp;
+	</div>
+	<div id="needHelp-2">
+		Need Help? Chat with us or call us
+		<br>
+		<div id="needHelp-2-1">
+			Live Chat
+			<br>
+			<a href="#">Start Chat</a><i class="fa fa-angle-double-right"></i>
+		</div>
+		<div id="needHelp-2-2">
+			<a href="#">Ask a Question</a><i class="fa fa-angle-double-right"></i>
+			<br>
+			<a href="#">Consult the FAQs</a><i class="fa fa-angle-double-right"></i>
+		</div>
+		<div id="needHelp-2-3">
+			Call us
+			<br>
+	        +1-888-428-7255
+		</div>
+	</div>
+</div>
+
+<div id="footerContainer">
+	
+</div>
+<hr style="border-color:blue ; border-width: 3px;">
+<table id="table3">
+	<tr>
+		<td>
+			<b>TakeTours Links</b>
+		</td>
+		<td>
+		
+		</td>
+		<td>
+			<b>More TakeTours Destinations</b>
+		</td>
+		<td>
+		
+		</td>
+		<td>
+			<b>More Sites</b>
+		</td>
+		<td>
+			<b>Connect with us</b>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Gift Certificate</a>
+		</td>
+		<td>
+			<a href="#">About Us</a>
+		</td>
+		<td>
+			<a href="#">East Coast Tours</a>
+		</td>
+		<td>
+			<a href="#">West Coast Tours</a>
+		</td>
+		<td>
+			<a href="#">汉字/漢字</a>
+		</td>
+		<td>
+			<font color="blue"><i class="fa fa-facebook-square"></i></font><a href="#">&nbsp;&nbsp;Be a fan</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Coupons</a>
+		</td>
+		<td>
+			<a href="#">Work with us</a>
+		</td>
+		<td>
+			<a href="#">New York Tours & Vacation</a>
+		</td>
+		<td>
+			<a href="#">Yellowstone Tours</a>
+		</td>
+		<td>
+			<a href="#">国语/國語</a>
+		</td>
+		<td>
+			<font color="red"><i class="fa fa-google-plus-square"></i></font><a href="#">&nbsp;&nbsp;Add to circles</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Travel Insurance</a>
+		</td>
+		<td>
+			<a href="#">Travel blog</a>
+		</td>
+		<td>
+			<a href="#">Niagara Falls Tours</a>
+		</td>
+		<td>
+			<a href="#">Grand Canyon Tours</a>
+		</td>
+		<td>
+			<a href="#">Español</a>
+		</td>
+		<td>
+			<font color="skyblue"><i class="fa fa-twitter"></i></font><a href="#">&nbsp;&nbsp;Follow us</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Group Services</a>
+		</td>
+		<td>
+			<a href="#">Help Center</a>
+		</td>
+		<td>
+			<a href="#">Tours & Vacation Packages</a>
+		</td>
+		<td>
+			<a href="#">Los Angeles Tours & Vacations</a>
+		</td>
+		<td>
+			<a href="#">GotoBus.com</a>
+		</td>
+		<td>
+			<font color="red"><i class="fa fa-youtube-play"></i></font><a href="#">&nbsp;&nbsp;Suscribe</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Travel Companions</a>
+		</td>
+		<td>
+			<a href="#">Site Map</a>
+		</td>
+		<td>
+			<a href="#">Latin America Tours</a>
+		</td>
+		<td>
+			<a href="#">San Francisco Tours & Vacations</a>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+		<td>
+			<font color="red"><i class="fa fa-pinterest-square"></i></font><a href="#">&nbsp;&nbsp;Pin us</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Loyalty Program</a>
+		</td>
+		<td>
+			<a href="#">All Tours</a>
+		</td>
+		<td>
+			<a href="#">Europe Tours & Vacations</a>
+		</td>
+		<td>
+			<a href="#">Mexico Tours & Vacations</a>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+		<td>
+			<font color="brown"><i class="fa fa-instagram"></i></font><a href="#">&nbsp;&nbsp;Find us</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="#">Affiliate Program</a>
+		</td>
+		<td>
+			<a href="#">Price Protection</a>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+		<td>
+			<a href="#">See all destinations</a><i class="fa fa-angle-double-right"></i>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+		<td>
+			<a href="#"></a>
+		</td>
+	</tr>
+
+</table>
+
+
+
+<footer>
+	<div id="foot1">
+		<h1>Take<span id="spanH1">Tours</span></h1>
+	</div>
+	<div id="foot2">
+		Copyright 2015 by TakeTours.com.<br>All rights reserved. TakeTours is a registered trademark of IvyMedia Corporation.<br>Use of this website constitutes acceptance of TakeTours's Security Statement, Privacy Policy and User Agreement.
+	</div>
+	<div id="credits">
+		<center>
+			<b>
+				| Designed by : An`Kit Singh |
+				<br>
+				| Under the Guidance of : Sumit Khandelwal Sir |
+			</b>
+		</center>
+	</div>
+</footer>
+
+</body>
+</html>
