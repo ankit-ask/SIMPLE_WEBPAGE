@@ -10,25 +10,30 @@
 
 var slideimages = new Array()
 
-slideimages[0] = new Image()
+for (var i = 0; i < 5; i++) { // this should be used rather than writing one be one
+   slideimages[i] = new Image();
+   slideimages[i].src = "images/slide"+(i+1)+".jpg";	
+}
 
-slideimages[0].src = "images/slide1.jpg"
+// slideimages[0] = new Image()
 
-slideimages[1] = new Image()
+// slideimages[0].src = "images/slide1.jpg"
 
-slideimages[1].src = "images/slide2.jpg"
+// slideimages[1] = new Image()
 
-slideimages[2] = new Image()
+// slideimages[1].src = "images/slide2.jpg"
 
-slideimages[2].src = "images/slide3.jpg"
+// slideimages[2] = new Image()
 
-slideimages[3] = new Image()
+// slideimages[2].src = "images/slide3.jpg"
 
-slideimages[3].src = "images/slide4.jpg"
+// slideimages[3] = new Image()
 
-slideimages[4] = new Image()
+// slideimages[3].src = "images/slide4.jpg"
 
-slideimages[4].src = "images/slide5.jpg"
+// slideimages[4] = new Image()
+
+// slideimages[4].src = "images/slide5.jpg"
 
 
 
